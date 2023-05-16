@@ -23,12 +23,12 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe} twitter biographies with no hashtags and clearly labeled "1." and "2.". ${
+  const prompt = `Generate 2 ${vibe}, concise, persuasive, and memorable elevator pitches with no hashtags and clearly labeled "1." and "2.". The first for my end users, and the second for potential investors.${
     vibe === "Funny"
       ? "Make sure there is a joke in there and it's a little ridiculous."
       : null
   }
-      Make sure each generated biography is less than 160 characters, has short sentences that are found in Twitter bios, and base them on this context: ${bio}${
+      Make sure each generated pitches do not start off with a question, and do not sound cheesy, and base them on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Twitter Bio Generator</title>
+        <title>Elevator Pitch Generator - MintoCrypto</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -89,9 +89,8 @@ const Home: NextPage = () => {
           <p>Star on GitHub</p>
         </a>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next Twitter bio using chatGPT
+          Transform Your Business Idea into an Elevator Pitch{" "}
         </h1>
-        <p className="text-slate-500 mt-5">47,118 bios generated so far.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
@@ -102,9 +101,10 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Copy your current bio{" "}
+              Just write in a quick description of what your idea is.{" "}
               <span className="text-slate-500">
-                (or write a few sentences about yourself)
+                (Dont't worry it doesn't have to be refined, we'll make sense of
+                it.)
               </span>
               .
             </p>
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "E.g. App that lets comedians try new material with other comics anywhere in the world"
             }
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
-              Generate your bio &rarr;
+              Generate Elevator Pitch &rarr;
             </button>
           )}
           {loading && (
@@ -170,7 +170,7 @@ const Home: NextPage = () => {
                         className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                         onClick={() => {
                           navigator.clipboard.writeText(generatedBio);
-                          toast("Bio copied to clipboard", {
+                          toast("Pitch copied to clipboard", {
                             icon: "✂️",
                           });
                         }}
