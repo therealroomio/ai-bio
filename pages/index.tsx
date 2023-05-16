@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       ? "Make sure there is a joke in there and it's a little ridiculous."
       : null
   }
-      Make sure each generated pitches do not start off with a question, and do not sound cheesy, and base them on this context: ${bio}${
+      Make sure both generated pitches do not start with a question, and base them on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
         <a
           className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
-          href="https://github.com/Nutlope/twitterbio"
+          href="https://github.com/therealroomio/ai-bio"
           target="_blank"
           rel="noopener noreferrer"
         >
