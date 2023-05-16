@@ -23,12 +23,12 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe}, concise, persuasive, and memorable elevator pitches with no hashtags and clearly labeled "1." and "2.". The first for my end users, and the second for potential investors.${
+  const prompt = `Generate 2 ${vibe} memorable elevator pitches with no hashtags and clearly labeled "1." and "2.". The generated elevator pitches should also be written in the same tone as the top 10 most succssfull startup elevator pitches such as airbnb, uber, and twitter. ${
     vibe === "Funny"
       ? "Make sure there is a joke in there and it's a little ridiculous."
       : null
   }
-      Make sure both generated pitches do not start with a question, and base them on this context: ${bio}${
+      Make sure the first pitch is aimed towards end users, and the second pitch is for an investor that should have a clear and catchy description of what the context is and reason to invest. Both pitches have to be based on this context: ${bio}${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Elevator Pitch Generator - MintoCrypto</title>
+        <title>Elevator Pitch Generator - MintoCrypto | Hard Digital</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
           <Github />
           <p>Star on GitHub</p>
         </a>
-        <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
+        <h1 className="sm:text-6xl text-4xl max-w-[650px] font-bold text-slate-900 tracking-tighter">
           Transform Your Business Idea into an Elevator Pitch{" "}
         </h1>
         <div className="max-w-xl w-full">
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
           />
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+            <p className="text-left font-medium">Select your tone.</p>
           </div>
           <div className="block">
             <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              className="bg-black rounded-xl text-white font-medium px-4 py-4 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
               Generate Elevator Pitch &rarr;
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
           )}
           {loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              className="bg-black rounded-xl text-white font-medium px-4 py-4 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               disabled
             >
               <LoadingDots color="white" style="large" />
@@ -157,7 +157,7 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  Your generated bios
+                  Your Pitches
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">

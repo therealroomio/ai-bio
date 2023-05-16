@@ -12,7 +12,7 @@ export default function Header() {
           width={32}
           height={32}
         />
-        <h1 className="sm:text-2xl text-1xl font-bold ml-2 tracking-tight my-auto">
+        <h1 className="sm:text-2xl text-1xl font-bold ml-2 tracking-tighter my-auto">
           Elevator Pitch Generator
         </h1>
       </Link>

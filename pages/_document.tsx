@@ -10,7 +10,7 @@ class MyDocument extends Document {
             name="description"
             content="Generate an elevator pitch in seconds."
           />
-          <meta property="og:site_name" content="twitterbio.com" />
+          <meta property="og:site_name" content="roomikh.com" />
           <meta
             property="og:description"
             content="Generate an elevator pitch in seconds."
@@ -22,8 +22,14 @@ class MyDocument extends Document {
             name="twitter:description"
             content="Generate an elevator pitch in seconds."
           />
-          <meta property="og:image" content="/public/og-image.png" />
-          <meta name="twitter:image" content="/public/og-image.png" />
+          <meta
+            property="og:image"
+            content="https://elevatorpitch.roomikh.com/og-image.png"
+          />
+          <meta
+            name="twitter:image"
+            content="https://elevatorpitch.roomikh.com/og-image.png"
+          />
         </Head>
         <body>
           <Main />
