@@ -31,7 +31,7 @@ class MyDocument extends Document {
             content="https://elevatorpitch.roomikh.com/og-image.png"
           />
         </Head>
-        <body>
+        <body className="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-gray-200 via-gray-100 to-white">
           <Main />
           <NextScript />
         </body>
