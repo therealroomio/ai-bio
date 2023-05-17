@@ -13,14 +13,14 @@ class MyDocument extends Document {
           <meta property="og:site_name" content="roomikh.com" />
           <meta
             property="og:description"
-            content="Ai Elevator Pitch Generator"
+            content="Quickly generate a compelling elevator pitch for your business idea."
           />
           <meta property="og:title" content="Elevator Pitch Generator" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Elevator Pitch Generator" />
           <meta
             name="twitter:description"
-            content="Ai Elevator Pitch Generator"
+            content="Quickly generate a compelling elevator pitch for your business idea."
           />
           <meta
             property="og:image"
