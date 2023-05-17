@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 class MyDocument extends Document {
   render() {
@@ -35,22 +34,6 @@ class MyDocument extends Document {
           />
           <meta name="theme-color" content="#000000" />
           <meta name="author" content="@therealroomio" />
-
-          <Script
-            strategy="lazyOnload"
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
-          />
-
-          <Script id="ga-script" strategy="lazyOnload">
-            {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
-      page_path: window.location.pathname,
-    });
-        `}
-          </Script>
         </Head>
         <body className="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-gray-200 via-gray-100 to-white">
           <Main />

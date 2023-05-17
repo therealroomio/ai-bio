@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
-
+import Script from "next/script";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
@@ -74,7 +74,21 @@ const Home: NextPage = () => {
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>Elevator Pitch Generator - MintoCrypto | Hard Digital</title>
-        <link rel="icon" href="/favicon.ico" />
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+        />
+
+        <Script id="ga-script" strategy="lazyOnload">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
+      page_path: window.location.pathname,
+    });
+        `}
+        </Script>
       </Head>
 
       <Header />
