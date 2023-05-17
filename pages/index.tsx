@@ -78,7 +78,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20 ">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20 tracking-tight ">
         <a
           className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
           href="https://github.com/therealroomio/ai-bio"
@@ -102,18 +102,17 @@ const Home: NextPage = () => {
             />
             <p className="text-left font-medium">
               Just write in a quick description of what your idea is.{" "}
-              <span className="text-slate-500">
+              <span className="text-slate-500 text-sm">
                 (Dont't worry it doesn't have to be refined, we'll make sense of
                 it.)
               </span>
-              .
             </p>
           </div>
           <textarea
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             rows={4}
-            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5 text-sm tracking-tight"
             placeholder={
               "E.g. App that lets comedians try new material with other comics anywhere in the world"
             }
@@ -131,7 +130,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-4 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
-              Generate Elevator Pitch &rarr;
+              Generate Elevator Pitch
             </button>
           )}
           {loading && (

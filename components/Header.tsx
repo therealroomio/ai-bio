@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center w-full mt-7 border-b-2 pb-7 sm:px-4 px-2">
-      <Link href="/" className="flex">
+    <header className="flex flex-col items-center w-full mt-7 pb-7 sm:px-4 px-2">
+      <Link href="/" className="flex items-center">
         <Image
           alt="header text"
           src="/hd-logo.png"
@@ -12,7 +12,7 @@ export default function Header() {
           width={32}
           height={32}
         />
-        <h1 className="sm:text-2xl text-1xl font-bold ml-2 tracking-tighter my-auto">
+        <h1 className="sm:text-2xl text-xl font-bold ml-2 tracking-tight">
           Elevator Pitch Generator
         </h1>
       </Link>
