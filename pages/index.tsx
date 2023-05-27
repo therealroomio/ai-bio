@@ -73,6 +73,10 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
         <title>Elevator Pitch Generator - MintoCrypto | Hard Digital</title>
         <Script
           strategy="lazyOnload"
