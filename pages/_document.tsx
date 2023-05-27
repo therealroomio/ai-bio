@@ -34,8 +34,12 @@ class MyDocument extends Document {
           />
           <meta name="theme-color" content="#000000" />
           <meta name="author" content="@therealroomio" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+          />
         </Head>
-        <body className="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-gray-200 via-gray-100 to-white">
+        <body className="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-gray-100 via-gray-300 to-white">
           <Main />
           <NextScript />
         </body>
